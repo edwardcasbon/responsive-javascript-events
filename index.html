@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Responsive JavaScript Events</title>
+	</head>
+	<body>
+		
+		<h1>Responsive JavaScript Events</h1>
+		
+		<a href="#" id="button">Press me</a>
+		
+		<script src="rje.js"></script>
+		<script>
+		RJE.setup([
+			{
+				"label": "mobile",
+				"min": 0,
+				"max": 600,
+				"script": "mobile.js"
+			},
+			{
+				"label": "tablet",
+				"min": 600,
+				"max": 1000,
+				"script": "tablet.js"
+			},
+			{
+				"label": "desktop",
+				"min": 1000,
+				"max": 9999,
+				"script": "desktop.js"
+			}
+		]);
+		</script>
+	</body>
+</html>
