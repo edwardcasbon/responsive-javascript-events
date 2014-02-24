@@ -13,41 +13,41 @@ In your breakpoint related JavaScripts, you add event listeners to events, and w
 
 Setting up your breakpoints:
 
-<script>
-RJE.setup([
-	{
-		"label": "mobile",
-		"min": 0,
-		"max": 600,
-		"script": "mobile.js"
-	},
-	{
-		"label": "tablet",
-		"min": 600,
-		"max": 1000,
-		"script": "tablet.js"
-	},
-	{
-		"label": "desktop",
-		"min": 1000,
-		"max": 9999,
-		"script": "desktop.js"
-	}
-]);
-</script>
+	<script>
+	RJE.setup([
+		{
+			"label": "mobile",
+			"min": 0,
+			"max": 600,
+			"script": "mobile.js"
+		},
+		{
+			"label": "tablet",
+			"min": 600,
+			"max": 1000,
+			"script": "tablet.js"
+		},
+		{
+			"label": "desktop",
+			"min": 1000,
+			"max": 9999,
+			"script": "desktop.js"
+		}
+	]);
+	</script>
 
-Adding event listeners in a mobile JavaScript:
+Adding event listeners in a mobile.js JavaScript:
 
-<script>
-var button = document.getElementById("button");
-RJE.addListener(button, 'click', function() {
-	window.alert("Mobile button clicked");
-});
-
-RJE.addListener(window, 'scroll', function(){
-	document.getElementById('debug').innerHTML = window.scrollY;
-});
-</script>
+	<script>
+	var button = document.getElementById("button");
+	RJE.addListener(button, 'click', function() {
+		window.alert("Mobile button clicked");
+	});
+	
+	RJE.addListener(window, 'scroll', function(){
+		document.getElementById('debug').innerHTML = window.scrollY;
+	});
+	</script>
 
 ## Adding a listener
 
